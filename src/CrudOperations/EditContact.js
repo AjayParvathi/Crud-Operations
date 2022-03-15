@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useNavigate, useParams } from "react-router-dom";
 
 const EditContact = () => {
@@ -22,6 +22,21 @@ const EditContact = () => {
   }, []);
   const enterValues = async (e) => {
     e.preventDefault();
+    if (
+      mobileNumber.charAt(0) != 9 &&
+      mobileNumber.charAt(0) != 8 &&
+      mobileNumber.charAt(0) != 7
+    ) {
+      alert("Number Should start with 7,8,9");
+      return;
+    }
+    if (mobileNumber.length < 10 || mobileNumber.length > 10) {
+      alert("number must be 10 digits");
+      return;
+    }
+    else {
+      navigate("/");
+    }
     await axios.put(`http://localhost:8000/data/${id}`, phone);
     navigate("/");
   };
