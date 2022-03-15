@@ -10,21 +10,40 @@ const CreateContact = () => {
     email: "",
     mobileNumber: "",
   });
+
+  const [number, setNumber] = useState("");
   const { name, email, mobileNumber } = phone;
   const ChangeValues = (e) => {
     setPhone({ ...phone, [e.target.name]: e.target.value });
+    const value = e.target.value.replace(/\D/g, "");
+    setNumber(value);
   };
   const enterValues = async (e) => {
     e.preventDefault();
-    // if(name.length<=3){
-    //   alert("please enater vaild name")
-    // }
-    // else if(mobileNumber.length<10 || mobileNumber.length >10){
-    //   alert("enter vaild number")
-    // }
+
+    if (
+      mobileNumber.charAt(0) != 9 &&
+      mobileNumber.charAt(0) != 8 &&
+      mobileNumber.charAt(0) != 7
+    ) {
+      alert("Number Should start with 7,8,9");
+      return;
+    }
+    if (mobileNumber.length < 10 || mobileNumber.length > 10) {
+      alert("number must be 10 digits");
+      return;
+    }
+    else {
+      navigate("/");
+    }
+
     await axios.post("http://localhost:8000/data", phone);
     navigate("/");
   };
+  // const handleChange =async (e) => {
+  //   const value = e.target.value.replace(/\D/g, "");
+  //   setNumber(value);
+  // };
   return (
     <div>
       <div className="container">
@@ -40,8 +59,6 @@ const CreateContact = () => {
                 value={name}
                 onChange={(e) => ChangeValues(e)}
                 required
-                
-                  
               />
             </div>
             <div className="form-group ">
@@ -57,15 +74,15 @@ const CreateContact = () => {
             </div>
             <div className="form-group ">
               <input
-                type="number"
+                type="text"
                 className="form-control"
                 placeholder="mobileNumber"
                 name="mobileNumber"
-                value={mobileNumber}
+                value={number}
                 onChange={(e) => ChangeValues(e)}
                 required
               />
-              
+              <p id="number"></p>
             </div>
             <div className="form-group">
               <input type="submit" className="btn btn-success " value="save" />
@@ -73,19 +90,9 @@ const CreateContact = () => {
                 cancel
               </Link>
             </div>
-            {/*
-            <div className="form-group ">
-              <Link to="/" className="btn btn-primary ">
-                Back
-              </Link>
-              <Link to="/" className="btn btn-primary mx-2">
-                Save
-              </Link>
-            </div>*/}
             
           </form>
         </div>
-        
       </div>
     </div>
   );
