@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+
 import { useNavigate, useParams } from "react-router-dom";
 
 const EditContact = () => {
   let navigate = useNavigate();
   const { id } = useParams();
+
   // alert(id)
   const [phone, setPhone] = useState({
     name: "",
@@ -27,11 +28,13 @@ const EditContact = () => {
       mobileNumber.charAt(0) != 8 &&
       mobileNumber.charAt(0) != 7
     ) {
-      alert("Number Should start with 7,8,9");
+      // alert("Number Should start with 7,8,9");
+      document.getElementById("number").innerHTML="**Number Should start with 7,8,9**"
       return;
     }
     if (mobileNumber.length < 10 || mobileNumber.length > 10) {
-      alert("number must be 10 digits");
+      // alert("number must be 10 digits");
+      document.getElementById("number").innerHTML="**number must be 10 digits**"
       return;
     }
     else {
@@ -90,6 +93,7 @@ const EditContact = () => {
                         value={mobileNumber}
                         onChange={(e) => ChangeValues(e)}
                       />
+                      <p id="number" style={{color:"red", fontSize:10}}></p>
                     </div>
                     <input
                       type="submit"
@@ -98,11 +102,7 @@ const EditContact = () => {
                     ></input>
                   </form>
                 </div>
-                {/*<div className="col-md-2">
-                    <Link to=" " className="btn btn-success mb-2 mx-2"><i className="bi bi-pencil-fill"></i>Edit</Link>
-                    <Link to=" " className="btn btn-primary mb-2 mx-2">view</Link>
-                    <Link to=" " className="btn btn-danger mb-2 mx-2">Delete</Link>
-  </div>*/}
+                
               </div>
             </div>
           </div>
