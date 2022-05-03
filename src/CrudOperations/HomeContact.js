@@ -11,11 +11,11 @@ const HomeContact = () => {
   }, []);
 
   const User = async () => {
-    const result = await axios.get("http://localhost:8000/data");
+    const result = await axios.get("http://localhost:7000/data");
     setPhone(result.data);
   };
   const deleteId = async (id) => {
-    const result = await axios.delete(`http://localhost:8000/data/${id}`);
+    const result = await axios.delete(`http://localhost:7000/data/${id}`);
     User();
   };
   // filter
@@ -30,7 +30,7 @@ const HomeContact = () => {
     })
     .map((phone, index) => {
       return (
-        <div key={phone.id}>
+        <div className="shadow-lg" key={phone.id}>
           <div className="row my-3 align-item-center bg-light d-flex">
             <div className="col-sm-3 ">
               <p className="h5">

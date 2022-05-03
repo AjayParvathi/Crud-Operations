@@ -2,7 +2,7 @@
   "data": [
     {
       "id": "01",
-      "name": " Ajay Parvathi yadav",
+      "name": " Ajay Parvathi",
       "email": "ajay@gmail.com",
       "mobileNumber": "8885798326"
     },
@@ -15,7 +15,7 @@
     {
       "name": "Manoj",
       "email": "manojperfex@gmail.com",
-      "mobileNumber": "8462549716",
+      "mobileNumber": "8462549715",
       "id": "Ro5l5Gn"
     },
     {
@@ -33,7 +33,7 @@
     {
       "name": "saipavan",
       "email": "manojperfex@gmail.com",
-      "mobileNumber": "7946464896",
+      "mobileNumber": "9464648969",
       "id": "_7zY0Zn"
     },
     {
@@ -41,12 +41,22 @@
       "email": "ajju123@gmail.com",
       "mobileNumber": "8123999999",
       "id": "wJxM-jK"
+    }
+  ],
+  "credentials": [
+    {
+      "names": " ajay parvathi",
+      "numbers": "8885798326",
+      "emails": "ajju123@gmail.com",
+      "passwords": "1234",
+      "id": "okJdCgA"
     },
     {
-      "name": "saipavan",
-      "email": "ajju123@gmail.com",
-      "mobileNumber": "9800980996",
-      "id": "LuZv37K"
+      "names": "koushik",
+      "numbers": "8885798326",
+      "emails": "ajju123@gmail.com",
+      "passwords": "123456",
+      "id": "FadESPB"
     }
   ]
 }

@@ -16,7 +16,7 @@ const ViewContact = () => {
     LoadUser();
   }, []);
   const LoadUser = async () => {
-    const result = await axios.get(`http://localhost:8000/data/${id}`);
+    const result = await axios.get(`http://localhost:7000/data/${id}`);
     console.log(result);
     setPhone(result.data);
   };
