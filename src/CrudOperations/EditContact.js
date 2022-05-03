@@ -40,11 +40,11 @@ const EditContact = () => {
     else {
       navigate("/");
     }
-    await axios.put(`http://localhost:8000/data/${id}`, phone);
+    await axios.put(`http://localhost:7000/data/${id}`, phone);
     navigate("/");
   };
   const LoadUser = async (e) => {
-    const result = await axios.get(`http://localhost:8000/data/${id}`);
+    const result = await axios.get(`http://localhost:7000/data/${id}`);
     console.log(result);
     setPhone(result.data);
   };

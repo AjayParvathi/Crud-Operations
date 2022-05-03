@@ -41,30 +41,22 @@
       "email": "ajju123@gmail.com",
       "mobileNumber": "8123999999",
       "id": "wJxM-jK"
+    }
+  ],
+  "credentials": [
+    {
+      "names": " ajay parvathi",
+      "numbers": "8885798326",
+      "emails": "ajju123@gmail.com",
+      "passwords": "1234",
+      "id": "okJdCgA"
     },
     {
-      "name": "saipavan",
-      "email": "ajju123@gmail.com",
-      "mobileNumber": "9800980996",
-      "id": "LuZv37K"
-    },
-    {
-      "name": "koushik",
-      "email": "manojperfex@gmail.com",
-      "mobileNumber": "8464648968",
-      "id": "FvhwKcz"
-    },
-    {
-      "name": "saipavan",
-      "email": "manojperfex@gmail.com",
-      "mobileNumber": "9464648900",
-      "id": "uG83lZG"
-    },
-    {
-      "name": "saipavan",
-      "email": "manojperfex@gmail.com",
-      "mobileNumber": "9464648969",
-      "id": "9Yri3xg"
+      "names": "koushik",
+      "numbers": "8885798326",
+      "emails": "ajju123@gmail.com",
+      "passwords": "123456",
+      "id": "FadESPB"
     }
   ]
 }
